@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Json practice</title>
+    <style>
+      * {
+        font-family: arial;
+      }
+      .message-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 10px;
+        column-gap: 10px;
+      }
+      .comment-div {
+        border: 1px solid gray;
+        padding: 10px 15px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 10px 1px rgba(128, 128, 128, 0.219);
+      }
+      .user-email,
+      .user-name,
+      .user-message {
+        color: green;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>500 users comment in here</h1>
+    <div id="showMessage" class="message-container">Your message in here</div>
+    <script src="JSON-Practice.js"></script>
+  </body>
+</html>
