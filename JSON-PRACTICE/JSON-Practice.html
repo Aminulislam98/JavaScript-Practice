@@ -26,6 +26,17 @@
         color: green;
         font-weight: bold;
       }
+      /* Responsive */
+      @media (max-width: 900px) {
+        .message-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 600px) {
+        .message-container {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
   </head>
   <body>

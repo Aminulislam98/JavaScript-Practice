@@ -1,16 +1,15 @@
-const comment = async () => {
+const loadComment = async () => {
   const url = "https://jsonplaceholder.typicode.com/comments";
   const response = await fetch(url);
-  const comment = await response.json();
-  getComment(comment);
+  const comments = await response.json();
+  getComment(comments);
 };
-comment();
+loadComment();
 const getComment = (value) => {
   const showMessage = document.getElementById("showMessage");
-  showMessage.innerHTML = "";
-
+  let html = "";
   value.forEach((element) => {
-    showMessage.innerHTML += `
+    html += `
     <div class="comment-div">
     <p class="user-name">User Name:</p>
     <p>${element.name}</p>
@@ -21,4 +20,5 @@ const getComment = (value) => {
     </div>
     `;
   });
+  showMessage.innerHTML = html;
 };
