@@ -1,11 +1,8 @@
-const comment = () => {
+const comment = async () => {
   const url = "https://jsonplaceholder.typicode.com/comments";
-  fetch(url)
-    .then((response) => response.json())
-    .then((comment) => {
-      console.log(comment);
-      getComment(comment);
-    });
+  const response = await fetch(url);
+  const comment = await response.json();
+  getComment(comment);
 };
 comment();
 const getComment = (value) => {
@@ -25,7 +22,3 @@ const getComment = (value) => {
     `;
   });
 };
-
-// 0
-// :
-// {postId: 1, id: 1, name: 'id labore ex et quam laborum', email: 'Eliseo@gardner.biz', body: 'laudantium enim quasi est quidem magnam voluptate …utem quasi\nreiciendis et nam sapiente accusantium'}
